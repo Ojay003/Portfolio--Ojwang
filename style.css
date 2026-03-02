@@ -9,7 +9,7 @@
 
     /* Typography & Surfaces */
     --text-main: #111827;   
-    --text-muted: #374151;     
+    --text-muted: #050505;     
     --surface-glass: rgba(255, 255, 255, 0.4);
     --glass-border: rgba(255, 255, 255, 0.6);
 
@@ -45,7 +45,7 @@ a {
     transition: all 0.3s ease;
 }
 
-/* ========= HEADER & NAVIGATION (Glassmorphism) ========= */
+/* == HEADER & NAVIGATION ===== */
 header {
     position: fixed;
     top: 0;
@@ -59,19 +59,30 @@ header {
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid var(--glass-border);
+    padding: 1.5rem 10%;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 900;
     color: var(--text-main);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     font-weight: 600;
+
+    /*desktop centering*/
+    @media screen and(min-width: 770px) {
+    .nav-links {
+        position: absolute;
+        left: 40%;
+        transform: translateY(-50%);
+        gap: 4rem;
+    }
+}
 }
 
 .nav-links a:hover {
@@ -92,12 +103,23 @@ header {
     background: linear-gradient(to bottom, var(--c-purple), var(--c-lime));
 }
 
-#leadership {
+#focus {
     background: linear-gradient(to bottom, var(--c-lime), var(--c-gold));
 }
 
-#contact {
+#leadership {
     background: linear-gradient(to bottom, var(--c-gold), var(--c-gray));
+}
+
+#contact {
+    background: linear-gradient(to bottom, var(--c-gray), var(--text-main));
+}
+
+#contact h2, #contact p {
+    color: #ffffff; 
+}
+#contact h2 {
+    border-bottom-color: #ffffff;
 }
 
 /* ==== SECTION LAYOUTS ======== */
@@ -105,8 +127,8 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
-    padding-top: 80px; 
+    padding: 140px 10% 4rem 10%;
+
 }
 
 .portfolio-section, .contact-section {
@@ -122,14 +144,14 @@ header {
 }
 
 .hero-content h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--text-muted);
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     max-width: 600px;
     margin-bottom: 2.5rem;
     color: var(--text-muted);
