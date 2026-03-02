@@ -15,14 +15,14 @@
 
     <header>
         <nav>
-            <div class="logo">JD.</div>
+            <div class="logo">OJ.</div>
 
             <div class="hamburger">
             <div class="line1"></div>
             <div class="line1"></div>
             <div class="line1"></div>
             </div>
-            
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#engineering">Engineering</a></li>
@@ -117,13 +117,16 @@
             <h2>Let's Connect</h2>
             <p>Currently open for roles in operations, engineering, and data analysis.</p>
             
-            <a href="resume.pdf" download class="btn-download">Download Resume</a>
+            <a href="Jackson_Ojwang_Resume.pdf"
+            target="_blank" download="Jackson_Ojwang_Resume.pdf"
+            class="btn-download">download Resume</a>
 
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
+            <form id="contact-form" action="https://formspree.io/f/mwvnjgkq" method="post">
+                <input type="text" id="name" name="name" placeholder="Enter Your Name">
+                <input type="email" id="email" name="email" placeholder="Please enter your email">
+                <textarea id="message" name="message" placeholder="Type your message" rows="5" required></textarea>
+                <button type="submit" id="submit-btn"> Send message</button>
+                <p id="form-status" style="display: none; margin-top: 1rem; font-weight: 600;"></p>
             </form>
         </section>
 

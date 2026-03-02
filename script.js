@@ -43,3 +43,57 @@ links.forEach(link => {
         hamburger.classList.remove('toggle');
     });
 });
+
+// ======== CONTACT FORM HANDLING ========
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const submitBtn = document.getElementById('submit-btn');
+
+contactForm.addEventListener('submit', async function(event) {
+    // Prevent the default page reload
+    event.preventDefault();
+
+    // Change button text so the user knows it's working
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    // Package the form data
+    const formData = new FormData(contactForm);
+
+    try {
+        // Send the data to Formspree
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            // Success!
+            formStatus.innerText = "Message sent successfully! I'll be in touch soon.";
+            formStatus.style.color = "#15803d"; 
+            formStatus.style.display = "block";
+            contactForm.reset(); // Clear the form
+        } else {
+            // Formspree returned an error
+            formStatus.innerText = "Oops! There was a problem sending your message.";
+            formStatus.style.color = "#b91c1c"; 
+            formStatus.style.display = "block";
+        }
+    } catch (error) {
+        // Network error
+        formStatus.innerText = "Network error. Please try again later.";
+        formStatus.style.color = "#b91c1c";
+        formStatus.style.display = "block";
+    } finally {
+        // Reset the button
+        submitBtn.innerText = "Send Message";
+        submitBtn.disabled = false;
+
+        setTimeout(() => {
+            formStatus.style.display = "none";
+        }, 5000);
+    }
+});
