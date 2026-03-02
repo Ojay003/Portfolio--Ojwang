@@ -22,3 +22,24 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 // Tell the observer to watch every hidden element
 hiddenElements.forEach((el) => observer.observe(el));
+
+// ==== MOBILE NAVIGATION TOGGLE =====
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links li');
+
+hamburger.addEventListener('click', () => {
+    // Toggle Nav
+    navLinks.classList.toggle('nav-active');
+
+    // Hamburger Animation
+    hamburger.classList.toggle('toggle');
+});
+
+// Close the menu automatically when a link is clicked
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-active');
+        hamburger.classList.remove('toggle');
+    });
+});

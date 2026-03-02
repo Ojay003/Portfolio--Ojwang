@@ -388,3 +388,114 @@ footer {
         max-width: 300px; 
     }
 }
+
+/* ======= MOBILE RESPONSIVENESS==== */
+
+/* Hamburger Styling */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-main);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    /*  Body and Section Padding */
+    .hero-section {
+        padding: 120px 5% 4rem 5%; 
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .portfolio-section, .contact-section {
+        padding: 5rem 5%; 
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; 
+    }
+    
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio-section h2, .contact-section h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Fix the Split Layout*/
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-visual-column {
+        order: -1; 
+    }
+
+    .floating-render {
+        max-width: 280px; 
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    /* Mobile Navigation Menu */
+    body {
+        overflow-x: hidden; 
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: right 0.4s ease-in-out;
+        z-index: 1500;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    .nav-active {
+        right: 0;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
