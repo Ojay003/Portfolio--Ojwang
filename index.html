@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Aerospace & Engineering</title>
+    <title>Portfolio | Aerospace & Engineer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,12 @@
 
     <header>
         <nav>
-            <div class="logo">OJ.</div>
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/logo.jpg" alt="Jackson Ojwang logo"
+                class="nav-logo">
+                </a>
+            </div>
 
             <div class="hamburger">
             <div class="line1"></div>
@@ -34,15 +39,16 @@
         </nav>
     </header>
 
+                <!---HERO SECTION---->
     <main>
         <section id="home" class="hero-section">
-            <div class="hero-content hidden-scroll">
+            <div class="hero-content">
             <div class="hero-text-column">
         <h1>Hello, I'm Jackson Ojwang</h1>
         <h2>Aerospace Engineer | Software Developer | Impact Leadership</h2>
         <div class="about-container">
             <div class="profile-img-wrapper">
-                <img src="images/Portrait.PNG" alt="portait of Jackson">
+                <img src="images/Portrait.jpg" alt="portait of Jackson">
             </div>
             <div class="bio-text">
                 <p>I am an Aerospace Engineering student at Kenyatta University 
@@ -59,18 +65,37 @@
     </div>
 
     <div class="hero-visual-column">
-        <img src="images/floating.jpeg" class="floating-render" alt="AutoCAD 3D Render">
+        <video class="floating-video" autoplay loop muted playsinline>
+            <source src="images/floating.mp4" type="video/mp4">
+            Your browser does not support video tag
+        </video>
     </div>
 </div>
         </section>
         
+        <!---Engineering and expertise---->
         <section id="engineering" class="portfolio-section">
             <h2 class="hidden-scroll">Engineering & 3D Design</h2>
             <div class="grid-container">
                 <div class="card hidden-scroll">
-                    <img src="/api/placeholder/600/400" alt="AutoCAD Drone Mapping Render">
-                    <h3>Drone Mapping Project</h3>
+                    <img src="images/Drone.jpg" alt="AutoCAD Drone Mapping Render">
+                    <h3>Wildrone Project</h3>
                     <p>Conceptualization and structural design utilizing AutoCAD for spatial analysis.</p>
+                </div>
+                <div class="card hidden-scroll">
+                    <img src="images/rotor mechanics.jpg" alt="Aeromechanics Analysis">
+                    <h3>Rotary Wing Aeromechanics</h3>
+                    <p>Analysis of rotary wing dynamics and blade element momentum theory.</p>
+                </div>
+                <div class="card hidden-scroll">
+                    <img src="/api/placeholder/600/400" alt="Aeromechanics Analysis">
+                    <h3>Rotary Wing Aeromechanics</h3>
+                    <p>Analysis of rotary wing dynamics and blade element momentum theory.</p>
+                </div>
+                <div class="card hidden-scroll">
+                    <img src="/api/placeholder/600/400" alt="Aeromechanics Analysis">
+                    <h3>Rotary Wing Aeromechanics</h3>
+                    <p>Analysis of rotary wing dynamics and blade element momentum theory.</p>
                 </div>
                 <div class="card hidden-scroll">
                     <img src="/api/placeholder/600/400" alt="Aeromechanics Analysis">
@@ -80,6 +105,7 @@
             </div>
         </section>
 
+                    <!---Coding and programming---->
         <section id="code" class="portfolio-section">
             <h2 class="hidden-scroll">Code & Analytics</h2>
             <div class="grid-container">
@@ -89,18 +115,18 @@
                     <p>Python scripting for fetching and analyzing real-time financial market data.</p>
                 </div>
                 <div class="card hidden-scroll">
-                    <img src="/api/placeholder/600/400" alt="MATLAB Data Visualization">
+                    <img src="images/hover_est.png" alt="MATLAB Data Visualization">
                     <h3>Data Visualization</h3>
                     <p>MATLAB computational analysis, workspace table generation, and graphical representation.</p>
                 </div>
             </div>
         </section>
 
+                    <!---Certifications and other things---->
         <section id="focus" class="portfolio-section">
     <h2 class="hidden-scroll">Multidisciplinary Focus</h2>
     <div class="grid-container">
-        
-        <div class="card bg-image-card hidden-scroll" style="background-image: url('images/cloud.jpg');">
+        <div class="card bg-image-card hidden-scroll" style="background-image: url('images/');">
             <div class="card-overlay">
                 <h3>Google Cloud Certified</h3>
                 <p>Practitioner credentialed through Google Developers Africa, specializing in scalable cloud architecture.</p>
@@ -113,35 +139,38 @@
                 <p>Technical chart analysis and algorithmic data fetching for equities and cryptocurrency markets.</p>
             </div>
         </div>
-
-        <div class="card bg-image-card hidden-scroll" style="background-image: url('images/photography.jpg');">
+        <div class="card bg-image-card hidden-scroll" style="background-image: url('images/Concorde.jpg');">
             <div class="card-overlay">
                 <h3>Analog Photography</h3>
                 <p>Exploring composition and light through 35mm film and double-exposure techniques.</p>
             </div>
         </div>
-
     </div>
 </section>
-
-
-
+                                          
+                <!---Leadership and stuff---->
         <section id="leadership" class="portfolio-section">
             <h2 class="hidden-scroll">Leadership & Mentorship</h2>
             <div class="grid-container">
                 <div class="card hidden-scroll">
-                    <img src="/api/placeholder/600/400" alt="Mentoring at YYAS">
+                    <img src="images/YYAS.jpg" alt="Mentoring at YYAS">
                     <h3>Yale Young African Scholars</h3>
                     <p>Mentorship and academic guidance for incoming student cohorts.</p>
                 </div>
                 <div class="card hidden-scroll">
-                    <img src="/api/placeholder/600/400" alt="Teaching at Nambale Magnet School">
+                    <img src="images/NMS.jpg" alt="Teaching at Nambale Magnet School">
                     <h3>Educator & Mentor</h3>
+                    <p>Experience teaching at Nambale Magnet School, translating complex concepts into actionable lessons.</p>
+                </div>
+                <div class="card hidden-scroll">
+                    <img src="images/united-world-colleges.png" alt="United World colleges">
+                    <h3>Application Reviewer</h3>
                     <p>Experience teaching at Nambale Magnet School, translating complex concepts into actionable lessons.</p>
                 </div>
             </div>
         </section>
 
+                <!---Footer Section---->
         <section id="contact" class="contact-section hidden-scroll">
             <h2>Let's Connect</h2>
             <p>Currently open for roles in operations, engineering, and data analysis.</p>
@@ -161,9 +190,26 @@
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Ojwang Jackson. All rights reserved.</p>
-    </footer>
+       <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <img src="images/logo.jpg" alt="Jackson Ojwang logo"
+        class="footer-logo">
+            <p>Building at the intersection of aerospace, software, and impact.</p>
+        </div>
+        
+        <div class="footer-links">
+            <a href="https://github.com/ojay003" target="_blank">GitHub</a>
+            <a href="https://ke.linkedin.com/in/jackson-ijwang-463024352" target="_blank">LinkedIn</a>
+            <a href="dredyoj@gmail.com">Email</a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Jackson Ojwang. All rights reserved.</p>
+        <a href="#home" class="back-to-top">↑ Top</a>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>

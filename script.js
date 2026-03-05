@@ -97,3 +97,22 @@ contactForm.addEventListener('submit', async function(event) {
         }, 5000);
     }
 });
+
+// ===== VIDEO =========
+const heroVideo = document.querySelector('.floating-video');
+
+if (heroVideo) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                heroVideo.play();
+            } else {
+                heroVideo.pause();
+            }
+        });
+    }, { 
+        threshold: 0.1 
+    }); 
+
+    observer.observe(heroVideo);
+}
