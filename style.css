@@ -3,7 +3,7 @@
     /* color Palette */
     --c-mint: #9a9abe;    /* Landing Page */
     --c-purple: #A879D4;  /* Engineering */
-    --c-lime: #DBF549;    /* Code & Analytics */
+    --c-lime: #23d367;    /* Code & Analytics */
     --c-gold: #ee8ad5;    /* Leadership */
     --c-gray: #882e2e;    /* Contact/Footer */
 
@@ -117,7 +117,7 @@ nav {
     background: linear-gradient(to bottom, var(--c-mint), var(--c-purple));
 }
 
-#code {
+#coding {
     background: linear-gradient(to bottom, var(--c-purple), var(--c-lime));
 }
 
@@ -328,6 +328,12 @@ footer {
 .card h3 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+}
+.card h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size:x-large;
+    font-family: var(--text-main);
 }
 
 .card p {
