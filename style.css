@@ -5,7 +5,7 @@
     --c-purple: #A879D4;  /* Engineering */
     --c-lime: #23d367;    /* Code & Analytics */
     --c-gold: #ee8ad5;    /* Leadership */
-    --c-gray: #882e2e;    /* Contact/Footer */
+    --c-gray: #e54cf3;    /* Contact/Footer */
 
     /* Typography & Surfaces */
     --text-main: #111827;   
@@ -383,8 +383,8 @@ footer {
 }
 
 .hero-text-column {
-    flex: 1.3; 
-    max-width: 1200px;
+    flex: 1.1; 
+    max-width: 7500px;
     z-index: 2; 
 }
 
@@ -401,6 +401,7 @@ footer {
     max-width: 450px; 
     height: auto;
     margin-right: -10vw;
+    margin-top: 200px;
     border-radius: 20px 0 0 20px; 
     border: 1px solid var(--glass-border);
     border-right: none;
@@ -408,6 +409,15 @@ footer {
     animation: smoothFloat 8s ease-in-out infinite;
     object-fit: cover; 
     overflow: hidden;
+}
+@media screen and (max-width=770px) {
+    .floating-video {
+        margin-top: 0;
+        margin-right: 0;
+        border-radius: 20px;
+        border-right: 1px solid var(--glass-border);
+        max-width: 90%;
+    }
 }
 
 /* ==== RESPONSIVE DESIGN======= */
@@ -445,7 +455,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    /*  Body and Section Padding */
     .hero-section {
         padding: 120px 5% 4rem 5%; 
         height: auto;
@@ -669,4 +678,160 @@ footer {
     background: #ffffff;
     color: var(--text-main);
     border: 1px solid #ffffff;
+}
+
+/* -- PAGES----- */
+
+body:has(.project-hero) {
+    background: linear-gradient(to bottom, var(--c-mint), var(--c-purple), var(--text-main));
+    color: var(--text-main);
+}
+.project-hero {
+    padding: 180px 10% 4rem 10%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    min-height: 70vh;
+}
+
+.project-hero-content {
+    flex: 1;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.project-title {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.meta-tag {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--glass-border);
+}
+
+.project-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.project-hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-main-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.project-details {
+    padding: 4rem 10% 8rem 10%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.details-grid {
+    display: flex;
+    gap: 4rem;
+    background: var(--surface-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 4rem;
+}
+
+.details-text {
+    flex: 1.5;
+}
+
+.details-text h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--c-purple);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.details-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.project-bullets {
+    list-style: none;
+    padding: 0;
+}
+
+.project-bullets li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.project-bullets li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #7B61FF; 
+    font-weight: bold;
+}
+
+.details-visuals {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.secondary-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .project-hero, .details-grid {
+        flex-direction: column;
+    }
+    .project-hero {
+        padding-top: 140px;
+    }
+    .details-grid {
+        padding: 2rem;
+    }
+    .project-title {
+        font-size: 2.5rem;
+    }
 }
